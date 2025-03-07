@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form For RKBMembers</title>
+    <style>
+      body{
+        background-color: #f8f2d8;
+      }
+      .gform{
+        align-self: center;
+        margin-left: 30%;
+      }
+      .img{
+        height: 200px;
+        width: 600px;
+        margin-left: 31.2%;
+        border-radius: 10px;
+      }
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      @media screen  and (max-width :768px) {
+        .gform{
+          margin-left: 0;
+          width: 100%;
+        }
+        .img{
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img">
+      <img src="temple.png" alt="">
+    </div>
+    <iframe
+      class="gform"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSebiaC-V_JnGTrRlEPMnJKh9V-H7jpwI9Qw-7BLogL2mYMO9w/viewform?embedded=true"
+      width="640"
+      height="1913"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      >Loading…</iframe
+    >
+    <script>
+      let load=0
+      document.querySelector(".gform").onload = () => {
+        load++
+        console.log("hello world")
+        if (load >2) {
+          /*Second reload is a submit*/
+          document.location = "https://chat.whatsapp.com/LBBtytfI7CZLBvhcl9T3Bz";
+        }
+      };
+    </script>
+  </body>
+</html>
